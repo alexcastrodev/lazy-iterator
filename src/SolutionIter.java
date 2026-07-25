@@ -1,9 +1,12 @@
+import java.io.BufferedReader;
 import java.io.Reader;
 import java.util.Iterator;
 
 public class SolutionIter implements Iterator<Integer> {
-    public SolutionIter(Reader inp) {
+    private final BufferedReader reader;
 
+    public SolutionIter(Reader inp) {
+        this.reader = new BufferedReader(inp);
     }
 
     public Iterator<Integer> iterator() {
