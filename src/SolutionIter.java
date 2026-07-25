@@ -10,7 +10,7 @@ public class SolutionIter implements Iterator<Integer> {
     }
 
     public Iterator<Integer> iterator() {
-        return null;
+        return new SolutionIter(reader);
     }
 
     @Override
