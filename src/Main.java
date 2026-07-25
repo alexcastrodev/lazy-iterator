@@ -1,11 +1,9 @@
-import java.io.StringReader;
+import java.io.Reader;
 
 void main() {
     Reader reader = new StringReader("123\nabc\n-45\n");
-    SolutionIter iter = new SolutionIter(reader);
 
-    while (iter.hasNext()) {
-        Integer x = iter.next();
+    for (Integer x : new SolutionIter(reader)) {
         System.out.println(x);
     }
 }
